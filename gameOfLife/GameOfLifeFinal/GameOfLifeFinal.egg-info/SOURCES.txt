@@ -1,0 +1,14 @@
+setup.py
+GameOfLifeFinal.egg-info/PKG-INFO
+GameOfLifeFinal.egg-info/SOURCES.txt
+GameOfLifeFinal.egg-info/dependency_links.txt
+GameOfLifeFinal.egg-info/top_level.txt
+model/__init__.py
+model/board.py
+model/cell.py
+model/observer.py
+view/Ui_AboutDialog.py
+view/Ui_GameOfLife.py
+view/Ui_LoadPatternDialog.py
+view/__init__.py
+view/main_window.py
