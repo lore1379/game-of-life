@@ -261,7 +261,7 @@ class MainWindow(QMainWindow):
         if self._paused:
             # Starting simulation
             self._paused = False
-            # Disable buttons that works if paused
+            # Disable buttons that work if paused
             self.ui.clearButton.setEnabled(False)
             self.ui.nextGenButton.setEnabled(False)
             self.ui.resizeButton.setEnabled(False)
@@ -271,7 +271,7 @@ class MainWindow(QMainWindow):
         else:
             # Stopping simulation
             self._paused = True
-            # Enable buttons that works if paused
+            # Enable buttons that work if paused
             self.ui.clearButton.setEnabled(True)
             self.ui.nextGenButton.setEnabled(True)
             self.ui.resizeButton.setEnabled(True)
