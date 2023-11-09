@@ -253,17 +253,29 @@ class MainWindow(QMainWindow):
         """
         Start or pause the simulation based on the current state.
 
-        If the simulation is paused, this method starts it and updates the button text. If the simulation is running, it
-        pauses it and updates the button text accordingly.
+        If the simulation is paused, this method starts it, updates button states,
+        and changes the button text to "Pause".
+        If the simulation is running, it pauses it, updates button states,
+        and changes the button text to "Start".
         """
         if self._paused:
             # Starting simulation
             self._paused = False
+            # Disable buttons that works if paused
+            self.ui.clearButton.setEnabled(False)
+            self.ui.nextGenButton.setEnabled(False)
+            self.ui.resizeButton.setEnabled(False)
+            self.ui.patternButton.setEnabled(False)
             self.timer.start(1000 // self._frameRateSlider.value())  # Set your desired interval in milliseconds
             self._startPauseButton.setText("Pause")
         else:
             # Stopping simulation
             self._paused = True
+            # Enable buttons that works if paused
+            self.ui.clearButton.setEnabled(True)
+            self.ui.nextGenButton.setEnabled(True)
+            self.ui.resizeButton.setEnabled(True)
+            self.ui.patternButton.setEnabled(True)
             self.timer.stop()
             self._startPauseButton.setText("Start")
 
