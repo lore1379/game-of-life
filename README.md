@@ -19,6 +19,7 @@ Conway's Game of Life implementation with a finite board, using Python 3, PyQT 5
 # Dependencies
 - Python 3
 - PyQT 5
+- NumPy
 
 # How to run the game
 Can be started via terminal using ./start_game.sh
